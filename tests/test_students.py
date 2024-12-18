@@ -1,5 +1,10 @@
 import json
-from src.students import save_to_file, load_from_file, add_student, remove_student, mark_attendance
+
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(_file_), '../src')))
+
+from students import save_to_file, load_from_file, add_student, remove_student, mark_attendance
 
 # Test zapisywania do pliku
 def test_save_to_file(tmp_path):
