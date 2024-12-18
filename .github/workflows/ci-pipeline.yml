@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: '3.10'  # Upewnij się, że wersja jest poprawna
 
       - name: Install Dependencies
         run: |
@@ -62,5 +62,5 @@ jobs:
       - name: Create Issues from TODOs
         uses: alstr/todo-to-issue-action@v4
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-body: "Automatically created from TODO comments in the code."
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMENT_MARKER: "Automatically created from TODO comments in the code."
