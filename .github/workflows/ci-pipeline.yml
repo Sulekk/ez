@@ -1,0 +1,25 @@
+jobs:
+  create-issues:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Issues from TODOs
+        uses: alstr/todo-to-issue-action@v1.4.1
+
+  tests-and-coverage:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Unit Tests and Coverage
+        run: |
+          pytest --cov
