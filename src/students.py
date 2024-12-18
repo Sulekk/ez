@@ -1,3 +1,5 @@
+import json
+
 # Zapisywanie do pliku
 def save_to_file(data, filename):
     # TODO: Sprawdzić, czy plik istnieje przed zapisaniem
