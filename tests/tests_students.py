@@ -1,3 +1,6 @@
+import json
+from src.students import save_to_file, load_from_file, add_student, remove_student, mark_attendance
+
 # Test zapisywania do pliku
 def test_save_to_file(tmp_path):
     # TODO: Przetestować zapis do pliku w lokalizacji tylko do odczytu
